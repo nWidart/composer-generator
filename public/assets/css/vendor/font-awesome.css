@@ -38,6 +38,7 @@
 [class*=" icon-"] {
   font-family: FontAwesome;
   font-weight: normal;
+  font-size: 18px;
   font-style: normal;
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;

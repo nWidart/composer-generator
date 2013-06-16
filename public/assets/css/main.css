@@ -5,3 +5,14 @@ body {
     font-family: 'Lato';
     /* The html and body elements cannot have any padding or margin. */
 }
+a {
+    text-decoration: none;
+    color: #434343;
+}
+a:hover {
+    text-decoration: none;
+}
+.nwTip {
+    color: #434343;
+    margin: 0 5px;
+}

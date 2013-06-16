@@ -9,9 +9,9 @@
                 Composer.json Generator
             @show
         </title>
-        <meta name="keywords" content="Alys, Faq" />
+        <meta name="keywords" content="Composer, Laravel, Generator" />
         <meta name="author" content="Nicolas Widart" />
-        <meta name="description" content="FAQ d'alys" />
+        <meta name="description" content="Laravel 4 Composer Generator" />
 
         <!-- Mobile Specific Metas
         ================================================== -->

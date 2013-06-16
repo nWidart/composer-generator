@@ -43,14 +43,14 @@
             <label class="checkbox inline">
                 <input type="checkbox" name="profiler" id="profiler" value="profiler">
                 Profiler
-                <a href="https://github.com/loic-sharma/profiler" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
-                <a href="https://packagist.org/packages/loic-sharma/profiler" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
+                <a href="https://github.com/loic-sharma/profiler" class="nwTip" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
+                <a href="https://packagist.org/packages/loic-sharma/profiler" class="nwTip" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
             </label>
             <label class="checkbox inline">
                 <input type="checkbox" name="jwGenerators" id="jwGenerators" value="jwGenerators">
                 Jeffrey Way's Generators
-                <a href="https://github.com/JeffreyWay/Laravel-4-Generators" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
-                <a href="https://packagist.org/packages/way/generators" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
+                <a href="https://github.com/JeffreyWay/Laravel-4-Generators" class="nwTip" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
+                <a href="https://packagist.org/packages/way/generators" class="nwTip" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
             </label>
             {{ $errors->first('packDev', '<span class="help-inline">:message</span>') }}
         </div>
@@ -63,20 +63,20 @@
             <label class="checkbox inline">
                 <input type="checkbox" name="sentry2" id="sentry2" value="sentry2">
                 Sentry 2
-                <a href="http://docs.cartalyst.com/sentry-2" data-toggle="tooltip" title="View Documentation" target="_blank"><i class="icon-file-text-alt"></i> </a>
-                <a href="https://packagist.org/packages/cartalyst/sentry" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
+                <a href="http://docs.cartalyst.com/sentry-2" class="nwTip" data-toggle="tooltip" title="View Documentation" target="_blank"><i class="icon-file-text-alt"></i> </a>
+                <a href="https://packagist.org/packages/cartalyst/sentry" class="nwTip" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
             </label>
             <label class="checkbox inline">
                 <input type="checkbox" name="confide" id="confide" value="confide">
                 Confide
-                <a href="https://github.com/Zizaco/confide" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
-                <a href="https://packagist.org/packages/zizaco/confide" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
+                <a href="https://github.com/Zizaco/confide" class="nwTip" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
+                <a href="https://packagist.org/packages/zizaco/confide" class="nwTip" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
             </label>
             <label class="checkbox inline">
                 <input type="checkbox" name="entrust" id="entrust" value="entrust">
                 Entrust
-                <a href="https://github.com/Zizaco/entrust" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
-                <a href="https://packagist.org/packages/zizaco/entrust" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
+                <a href="https://github.com/Zizaco/entrust" class="nwTip" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
+                <a href="https://packagist.org/packages/zizaco/entrust" class="nwTip" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
             </label>
             {{ $errors->first('packAuth', '<span class="help-inline">:message</span>') }}
         </div>

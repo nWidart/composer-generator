@@ -52,8 +52,10 @@ class HomeController extends BaseController
         }
 
         // Encode it back to json
+        # 5.4
         // $newComposer = json_encode($composerJson, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT);
-        $newComposer = json_encode($composerJson);
+        $newComposer = nwHelpers::prettyJson( json_encode($composerJson) );
+
         // Write the file
         $randomName = str_random(10) . '.json';
         File::put( $pathToFiles . $randomName, $newComposer);

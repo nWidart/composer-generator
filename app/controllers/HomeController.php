@@ -20,40 +20,23 @@ class HomeController extends BaseController
         $composer = File::get( $pathToModels . 'composer.json');
         $composerJson = json_decode( $composer, true );
 
-        // If there are development packages selected
-        if ( ! empty( $input['packDev'] ) )
-        {
-            switch ($input['packDev'])
-            {
-                case 'profiler':
-                    $composerJson['require'] = array_add($composerJson['require'], 'loic-sharma/profiler', '1.0.*');
-                    break;
-                case 'jwGenerators':
-                    $composerJson['require'] = array_add($composerJson['require'], 'way/generators', '1.0.*@dev');
-                    break;
-            }
-        }
+        // Development packages
+        if ( isset( $input['profiler'] ) )
+            $composerJson['require'] = array_add($composerJson['require'], 'loic-sharma/profiler', '1.0.*');
+        if ( isset( $input['jwGenerators'] ) )
+            $composerJson['require'] = array_add($composerJson['require'], 'way/generators', '1.0.*@dev');
 
-        // if there are auth packages
-        if ( ! empty( $input['packAuth'] ) )
-        {
-            switch ($input['packAuth'])
-            {
-                case 'sentry2':
-                    $composerJson['require'] = array_add($composerJson['require'], 'cartalyst/sentry', '2.0.*');
-                    break;
-                case 'confide':
-                    $composerJson['require'] = array_add($composerJson['require'], 'zizaco/confide', 'dev-master');
-                    break;
-                case 'entrust':
-                    $composerJson['require'] = array_add($composerJson['require'], 'zizaco/entrust', 'dev-master');
-                    break;
-            }
-        }
+        // Auth Packages
+        if ( isset( $input['sentry2'] ) )
+            $composerJson['require'] = array_add($composerJson['require'], 'cartalyst/sentry', '2.0.*');
+        if ( isset( $input['confide'] ) )
+            $composerJson['require'] = array_add($composerJson['require'], 'zizaco/confide', 'dev-master');
+        if ( isset( $input['entrust'] ) )
+            $composerJson['require'] = array_add($composerJson['require'], 'zizaco/confide', 'dev-master');
 
-        // Encode it back to json
-        # 5.4
-        // $newComposer = json_encode($composerJson, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT);
+
+        // Encode back to json
+        // $newComposer = json_encode($composerJson, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT); # php 5.4
         $newComposer = nwHelpers::prettyJson( json_encode($composerJson) );
 
         // Write the file

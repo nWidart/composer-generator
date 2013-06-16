@@ -41,11 +41,11 @@
         <h4>Development</h4>
         <div class="control-group {{ $errors->has('packDev') ? 'error' : '' }}">
             <label class="checkbox inline">
-                <input type="checkbox" name="packDev" id="profiler" value="profiler">
+                <input type="checkbox" name="profiler" id="profiler" value="profiler">
                 Profiler
             </label>
             <label class="checkbox inline">
-                <input type="checkbox" name="packDev" id="jwGenerators" value="jwGenerators">
+                <input type="checkbox" name="jwGenerators" id="jwGenerators" value="jwGenerators">
                 Jeffrey Way's Generators
             </label>
             {{ $errors->first('packDev', '<span class="help-inline">:message</span>') }}
@@ -57,15 +57,15 @@
         <h4>Authentification & Autorisations</h4>
         <div class="control-group {{ $errors->has('packAuth') ? 'error' : '' }}">
             <label class="checkbox inline">
-                <input type="checkbox" name="packAuth" id="sentry2" value="sentry2">
+                <input type="checkbox" name="sentry2" id="sentry2" value="sentry2">
                 Sentry 2
             </label>
             <label class="checkbox inline">
-                <input type="checkbox" name="packAuth" id="confide" value="confide">
+                <input type="checkbox" name="confide" id="confide" value="confide">
                 Confide
             </label>
             <label class="checkbox inline">
-                <input type="checkbox" name="packAuth" id="entrust" value="entrust">
+                <input type="checkbox" name="entrust" id="entrust" value="entrust">
                 Entrust
             </label>
             {{ $errors->first('packAuth', '<span class="help-inline">:message</span>') }}

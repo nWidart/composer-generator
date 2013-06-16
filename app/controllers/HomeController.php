@@ -52,7 +52,7 @@ class HomeController extends BaseController
         }
 
         // Encode it back to json
-        $newComposer = json_encode($composerJson);
+        $newComposer = json_encode($composerJson, JSON_PRETTY_PRINT);
 
         // Write the file
         $randomName = str_random(10) . '.json';

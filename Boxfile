@@ -1,0 +1,31 @@
+web1:
+  name: l4-composer-gen
+  shared_writable_dirs:
+    - /app/storage/cache
+    - /app/storage/logs
+    - /app/storage/meta
+    - /app/storage/sessions
+    - /app/storage/views
+    - /app/storage/files
+    - /app/storage/base
+    - /public/builds
+    - /public/uploads
+  document_root: /public
+  php_version: 5.3.23
+  php_extensions:
+    - apc
+    - mbstring
+    - pdo_mysql
+    - mcrypt
+    - gd
+    - curl
+    - zip
+  before_deploy:
+    #- "php artisan migrate"
+  after_deploy:
+    - "rm -f app/storage/cache/*"
+    - "rm -f app/storage/views/*"
+    - "rm -f app/storage/files/*"
+  after_build:
+    - "chmod +x deploy.sh"
+    - "./deploy.sh"

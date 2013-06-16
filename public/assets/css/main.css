@@ -1,0 +1,7 @@
+html,
+body {
+    height: 100%;
+    margin-top: 20px;
+    font-family: 'Lato';
+    /* The html and body elements cannot have any padding or margin. */
+}

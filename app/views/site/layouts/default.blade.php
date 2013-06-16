@@ -59,7 +59,7 @@
 
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li {{ (Request::is('/') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/questions') }}}">Generate</a></li>
+                            <li {{ (Request::is('/') ? ' class="active"' : '') }}><a href="{{{ URL::to('/') }}}">Generate</a></li>
                         </ul>
                     </div>
                     <!-- ./ nav-collapse -->

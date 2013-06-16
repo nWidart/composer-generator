@@ -22,6 +22,7 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
         <link href="{{{ asset('assets/css/vendor/bootplus.css') }}}" rel="stylesheet">
         <link href="{{{ asset('assets/css/vendor/bootplus-responsive.css') }}}" rel="stylesheet">
+        <link href="{{{ asset('assets/css/vendor/font-awesome.css') }}}" rel="stylesheet">
 
         <link href="{{{ asset('assets/css/main.css') }}}" rel="stylesheet">
 
@@ -101,6 +102,9 @@
         <script src="{{{ asset('assets/js/app.js') }}}"></script>
         <script>
             $(document).ready(function() {
+                $('body').tooltip({
+                  selector: "a[data-toggle=tooltip]"
+                });
             });
         </script>
         @section('scripts')

@@ -11,7 +11,7 @@ class HomeController extends BaseController
     {
         // set the paths
         $pathToFiles = app_path() . '/storage/files/';
-        $pathToModels = app_path() . '/storage/base/';
+        $pathToModels = public_path() . '/assets/baseComposer/';
 
         // Grab the input
         $input = Input::all();

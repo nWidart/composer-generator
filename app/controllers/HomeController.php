@@ -34,6 +34,8 @@ class HomeController extends BaseController
         if ( isset( $input['entrust'] ) )
             $composerJson['require'] = array_add($composerJson['require'], 'zizaco/confide', 'dev-master');
 
+        if ( isset( $input['basset'] ) )
+            $composerJson['require'] = array_add($composerJson['require'], 'jasonlewis/basset', 'dev-master');
 
         // Encode back to json
         // $newComposer = json_encode($composerJson, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT); # php 5.4

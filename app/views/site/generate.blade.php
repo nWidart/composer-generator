@@ -83,6 +83,17 @@
         <!-- ./ development Packages -->
     </div>
 
+    <div class="span6">
+        <h4>More packages...</h4>
+        <label class="checkbox inline">
+            <input type="checkbox" name="basset" id="basset" value="basset">
+            Basset
+            <a href="http://jasonlewis.me/code/basset/4.0" class="nwTip" data-toggle="tooltip" title="View Documentation" target="_blank"><i class="icon-file-text-alt"></i> </a>
+            <a href="https://github.com/jasonlewis/basset" class="nwTip" data-toggle="tooltip" title="View on github" target="_blank"><i class="icon-github"></i> </a>
+            <a href="https://packagist.org/packages/jasonlewis/basset" class="nwTip" data-toggle="tooltip" title="View on Packagist" target="_blank"><i class="icon-dropbox"></i> </a>
+        </label>
+    </div>
+
     <div class="span12">
         <div class="form-actions">
             <button type="reset" class="btn">Reset</button>

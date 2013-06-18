@@ -40,6 +40,7 @@ class HomeController extends BaseController
         // Encode back to json
         // $newComposer = json_encode($composerJson, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT); # php 5.4
         $newComposer = nwHelpers::prettyJson( json_encode($composerJson) );
+        $newComposer= str_replace('\\/', "/", $newComposer);
 
         // Write the file
         $randomName = str_random(10) . '.json';

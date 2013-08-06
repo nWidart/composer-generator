@@ -8,7 +8,7 @@
 @section('content')
 <div class="page-header">
     <h2>
-        Generate a composer.json file
+        Generate a composer.json file (beta)
     </h2>
 </div>
 

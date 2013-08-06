@@ -9,9 +9,24 @@ class HomeController extends BaseController
 
     public function postIndex()
     {
+        // Testing Codeivate stuff
+        // Not realy coding here.
         // set the paths
         $pathToFiles = app_path() . '/storage/files/';
+        $pathToLaravelModel = app_path() . '/storage/files/laravel/';
         $pathToModels = public_path() . '/assets/baseComposer/';
+
+
+        // Download fresh Laravel Source
+        // $url = "https://github.com/laravel/laravel/archive/master.zip";
+        // $fh = fopen( $pathToFiles.'file.zip', 'w');
+        // $ch = curl_init();
+        // curl_setopt($ch, CURLOPT_URL, $url);
+        // curl_setopt($ch, CURLOPT_FILE, $fh);
+        // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // this will follow redirects
+        // curl_exec($ch);
+        // curl_close($ch);
+        // fclose($fh);
 
         // Grab the input
         $input = Input::all();
@@ -43,8 +58,29 @@ class HomeController extends BaseController
         $newComposer= str_replace('\\/', "/", $newComposer);
 
         // Write the file
-        $randomName = str_random(10) . '.json';
+        // $randomName = str_random(10) . '.json';
+        $randomName = 'composer.json';
         File::put( $pathToFiles . $randomName, $newComposer);
+
+        // Make the ZIP archive
+        // $path = $pathToFiles;
+        // $zip = new ZipArchive;
+        // $zip->open($pathToModels . 'filetest.zip', ZipArchive::CREATE);
+        // if (false !== ($dir = opendir($path)))
+        //  {
+        //      while (false !== ($file = readdir($dir)))
+        //      {
+        //          if ($file != '.' && $file != '..')
+        //          {
+        //             $zip->addFile($path.DIRECTORY_SEPARATOR.$file);
+        //          }
+        //      }
+        //  }
+        //  else
+        //  {
+        //      die('Can\'t read dir');
+        //  }
+        // $zip->close();
 
         // Make a download response
         $response = Response::download( $pathToFiles . $randomName, 'composer.json', array('Content-type' => 'application/json'));
